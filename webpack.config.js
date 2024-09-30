@@ -11,7 +11,7 @@ module.exports = {
     devServer: {
         https: true,
         contentBase: __dirname + '/public',
-        host: '0.0.0.0',
+        host: '127.0.0.1',
         proxy: {
             '/api': process.env.SERVER_URL,
             '/socket.io': {

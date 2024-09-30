@@ -13,6 +13,8 @@
 /** @module connector **/
 import { Constants, VendorConnector } from '@salesforce/scv-connector-base';
 import { Sdk } from './vendor-sdk';
+import Keycloak from 'keycloak-js';
+
 /** 
  * Class representing a Service Cloud Voice Demo Connector
  */
@@ -29,7 +31,21 @@ export class Connector extends VendorConnector {
      * Called by SFDC to initialize the connector
      * @param {object} callCenterConfig - SFDC Contact Center Settings
      */
-    init(callCenterConfig) {
+    async init(callCenterConfig) {
+        console.log('!!! INIT CCCONFIG', callCenterConfig);
+
+        const keycloak = new Keycloak({
+            url: 'https://dev-19.ixcc-sandbox.avayacloud.com/',
+            realm: 'QZGJSV',
+            clientId: '9e95559d-ac6d-4fb3-93e6-47b1f2eb7d35'
+        });
+        
+        try {
+            const authenticated = await keycloak.init();
+            console.log(`User is ${authenticated ? 'authenticated' : 'not authenticated'}`);
+        } catch (error) {
+            console.error('Failed to initialize adapter:', error);
+        }
         return this.sdk.init(callCenterConfig);
     }
 
@@ -185,6 +201,7 @@ export class Connector extends VendorConnector {
     * Used to set the agent config, including the selected phone type and number
     */
     setAgentConfig(config) {
+        console.log('!!! SET AGENT CONFIG', config);
         return this.sdk.setAgentConfig(config);
     }
 

@@ -1,13 +1,43 @@
 <callCenter>
     <section sortOrder="0" name="reqGeneralInfo" label="General Information">
-        <item sortOrder="0" name="reqInternalName" label="InternalName">INTERNAL_NAME</item>
-        <item sortOrder="1" name="reqDisplayName" label="Display Name">Display Name</item>
-        <item sortOrder="2" name="reqVendorInfoApiName" label="Conversation Vendor Info Developer Name">namespace__vendorName</item>
+        <item sortOrder="0" name="reqInternalName" label="InternalName">SCVCCDef</item>
+        <item sortOrder="1" name="reqDisplayName" label="Display Name">SCV Contact Center</item>
+        <item sortOrder="2" name="reqVendorInfoApiName" label="Conversation Vendor Info Developer Name">scvavaya__AvayaVendor</item>
     </section>
 
     <section sortOrder="1" name="reqHvcc" label="SCV Settings">
-        <item sortOrder="0" name="reqTelephonyIntegrationCertificate" label="Telephony Integration Certificate">CERTIFICATE</item>
-        <item sortOrder="1" name="reqLongDistPrefix" label="Long Distance Prefix">+1</item>
+        <item sortOrder="0" name="reqTelephonyIntegrationCertificate" label="Telephony Integration Certificate">-----BEGIN CERTIFICATE-----
+MIIDczCCAlsCFAG+7yUgc3oVS834aUtYDwYvqup5MA0GCSqGSIb3DQEBCwUAMHYx
+CzAJBgNVBAYTAlJPMRIwEAYDVQQIDAlUaW1pc29hcmExEjAQBgNVBAcMCVRpbWlz
+b2FyYTEOMAwGA1UECgwFQXZheWExDzANBgNVBAMMBkl1bGlhbjEeMBwGCSqGSIb3
+DQEJARYPaXRyaWZAYXZheWEuY29tMB4XDTI0MDkyNTA5MjY0N1oXDTI1MDkyNTA5
+MjY0N1owdjELMAkGA1UEBhMCUk8xEjAQBgNVBAgMCVRpbWlzb2FyYTESMBAGA1UE
+BwwJVGltaXNvYXJhMQ4wDAYDVQQKDAVBdmF5YTEPMA0GA1UEAwwGSXVsaWFuMR4w
+HAYJKoZIhvcNAQkBFg9pdHJpZkBhdmF5YS5jb20wggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQDv7YbcOZ2tahfuCNbDzO1/qdQyA3vlk7k1b4u+4EuUculx
+xWgqdxrRNvkY1AMx/GlgdxNkQb1uun7iueb1+BiuoTtxnnscAgfoNbntUDRjdkjw
+0syO396W1U9nGWFq3/KMN0cao7gfdnxVOzyV6xcLL78lLNDZtBZQhFEwMGWnQqWn
+J17fm6GCaHFiWDUrHgS0TNbEiSq3t+wiJPog/nMFldgdTc8JnhmQOjJmmAvdl+uD
+b/2kGSi+Jwn7fYkAY8BbvoKBw+feZQeaqSIwN/sp8tr8iboOERGY/AIknhqqpPYA
+3mwgbHmwoWODCxfmurwm5Fyzo1jjP0eXKez91dUHAgMBAAEwDQYJKoZIhvcNAQEL
+BQADggEBAG1DIiJc4y0GL7AHpDlOnKO1oWccBzYrbze8PuUoinytgNJO4P7HMeE2
+9FPY/o6/V4DS2Ljm0OfTSpHZdMXpeiFsV1fztYIjD8ErymGzgYhiqj/qwWD8WW60
+PME6XSNUKg8qgzXts22GulKepUqv68Ezh3WxUUnmeNw1CgMAPI7Y/mfFOWwZO9ov
+38qf1HUQFhwZBKZveUn/11y8eB0yZGqnyHvg+eYXocGr48BFAcxyB7smYxLctJRu
+bU3/JlZTfPcS7zrnITZgAcz5WQtSzSGras+KyoTjXB51gtM3LQd37AkLWl6V6D/k
+6nZ8RG0mFQMrIj51cgsvkrBqwz7S20w=
+-----END CERTIFICATE-----
+        </item>
+        <item sortOrder="1" name="reqLongDistPrefix" label="Long Distance Prefix">+2</item>
+        <!-- Adaugă setările custom aici -->
+        <item sortOrder="2" name="reqTimeout" label="Request Timeout">5000</item>
+        <item sortOrder="3" name="reqCallCenterType" label="Call Center Type">SCVBYOT</item>
+        <item sortOrder="4" name="scvVendorLoginUrl" label="Vendor Login URL">https://127.0.0.1:8080/login.html</item>
+        <item sortOrder="5" name="reqStandbyUrl" label="Standby URL">https://domain:port/softphone</item>
+        <item sortOrder="6" name="reqSoftphoneHeight" label="Softphone Height">300</item>
+        <item sortOrder="7" name="reqSoftphoneWidth" label="Softphone Width">500</item>
+        <item sortOrder="8" name="reqSalesforceCompatibilityMode" label="Salesforce Compatibility Mode">Lightning</item>
+        <item sortOrder="9" name="reqUseApi" label="Use API">true</item>
     </section>
 
     <section sortOrder="2" name="providerSettings1" label="Button Assignment">
@@ -15,10 +45,10 @@
         <item sortOrder="1" name="custom1" label="custom1">Custom1</item>
         <item sortOrder="2" name="custom2" label="custom2">Custom2</item>
     </section>
+
     <section sortOrder="3" name="providerSettings2" label="Dialing Options">
         <item sortOrder="0" name="custom0" label="custom0">Custom0</item>
         <item sortOrder="1" name="custom1" label="custom1">Custom1</item>
         <item sortOrder="2" name="custom2" label="custom2">Custom2</item>
     </section>
 </callCenter>
-

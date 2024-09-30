@@ -377,11 +377,20 @@ export class Sdk {
         }).then(response => response.json())
           .then((data) => {
             if (data.success) {
+                console.log('!!! DATA SUCCES');
+                console.log('!!!showloginpage = ', this.state.showLoginPage);
                 this.toggleAgentPresence(true);
                 this.state.agentAvailable = !this.state.showLoginPage;
+
+                // const ssoResult = pbx.performSSO(ssoConfig)
+                // if (ssoResult.success) {
+                // return Promise.resolve(new InitResult({}));
+                // } else {
+                // return Promise.reject("Failed to login");
+                // }
                 return this.executeAsync('ssoLogin', this.state.showLoginPage ?
                 new InitResult({ showLogin: true, loginFrameHeight: 350 }) :
-                new InitResult({}));
+                new InitResult({ showLogin: true, loginFrameHeight: 350 }));
             } else {
                 return Promise.reject("Failed to configure tentant information");
             }
